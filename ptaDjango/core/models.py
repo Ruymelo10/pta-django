@@ -5,6 +5,7 @@ class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=100, null=False, blank=False)
     text = models.TextField(null=True, blank=True)
+    image = models.ImageField('Image', upload_to='institute/', null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
 
